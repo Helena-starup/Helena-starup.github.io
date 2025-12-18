@@ -1,0 +1,27 @@
+  html * {
+    color: #000;
+    font-family: monospace;
+  }
+
+  a {
+    color: rgb(142, 142, 255);
+    text-decoration: none
+  }
+
+  header {
+    display: flex;
+    height: 50px;
+    padding: 20px;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: right;
+  }
+
+  li {
+    list-style: none;
+    display: inline;
+  }
