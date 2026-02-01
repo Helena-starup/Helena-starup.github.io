@@ -28,7 +28,7 @@ margin-right: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
+
 }
 
 /* Hver enkelt billedboks */
@@ -78,7 +78,7 @@ header {
 }
 
 header>h1 {
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 header>h1>a {
   color:inherit;
