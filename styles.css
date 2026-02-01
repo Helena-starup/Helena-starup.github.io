@@ -23,6 +23,38 @@ margin-left: auto;
 margin-right: auto;
 }
 
+/* Galleriets container */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+/* Hver enkelt billedboks */
+.gallery-item {
+  margin: 5px;
+  border: 0px solid #ccc;
+  width: 180px;
+}
+
+/* Hover-effekt */
+.gallery-item:hover {
+  border: 1px solid #d8b4f0;
+}
+
+/* Billederne */
+.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+
+/* Teksten under billederne */
+.gallery-item .desc {
+  padding: 15px;
+  text-align: left;
+}
+
 main {
   flex-grow: 1;
   margin: 0 15px;
