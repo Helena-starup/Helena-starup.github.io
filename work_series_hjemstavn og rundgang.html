@@ -33,84 +33,91 @@
     </header>
 
     <main>
-        <p>Værkserie</p>
 
-        <div class="slideshow-container">
+        <div class="værkside">
+            <p>Værkserie</p>
 
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 4</div>
-                <img src="works/Alle lukker vinduet når stormen banker på_3.JPG" style="width:100%">
-                <div class="text">Caption Text</div>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="works/Alle lukker vinduet når stormen banker på_3.JPG" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="works/efterladt med blotlagte nerver.jpg" style="width:100%">
+                    <div class="text">Caption Two</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="works/Hvad vi tager med (selvportræt).jpeg" style="width:100%">
+                    <div class="text">Caption Three</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="works/jorden er giftig.jpg" style="width:100%">
+                    <div class="text">Caption Three</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            <br>
+            <!--prik markør -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
             </div>
 
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 4</div>
-                <img src="works/efterladt med blotlagte nerver.jpg" style="width:100%">
-                <div class="text">Caption Two</div>
-            </div>
 
-            <div class="mySlides fade">
-                <div class="numbertext">3 / 4</div>
-                <img src="works/Hvad vi tager med (selvportræt).jpeg" style="width:100%">
-                <div class="text">Caption Three</div>
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">4 / 4</div>
-                <img src="works/jorden er giftig.jpg" style="width:100%">
-                <div class="text">Caption Three</div>
-            </div>
 
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+            </script>
+            <br>
+
+
+
+            <!--Udstillingsbeskrivelse-->
+            Udstillet til hhv. Hjemstavn og....
 
         </div>
-        <br>
-        <!--prik markør -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-        </div>
-
-        <script>
-            let slideIndex = 1;
-            showSlides(slideIndex);
-
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
-
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-                let i;
-                let slides = document.getElementsByClassName("mySlides");
-                let dots = document.getElementsByClassName("dot");
-                if (n > slides.length) { slideIndex = 1 }
-                if (n < 1) { slideIndex = slides.length }
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-            }
-        </script>
-        <br>
-
-        
-
-        <!--Udstillingsbeskrivelse-->
-        Udstillet til hhv. Hjemstavn og....
 
     </main>
 
     <footer>
+        <hr />
         <p><a href="mailto:helena@lindegaard-starup.dk" class="fa fa-envelope"> helena@lindegaard-starup.dk</a></p>
         <a href="https://www.instagram.com/helena.starup/" class="fa fa-instagram"> helena_starup</a>
     </footer>
