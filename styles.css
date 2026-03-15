@@ -176,3 +176,50 @@ footer {
   from {opacity: .4}
   to {opacity: 1}
 }
+.hanger-top {
+  /* 1. Reset the default line */
+  border: none;
+  height: 0;
+  margin: 65px auto; 
+      /* Total width of the hanger */
+  position: relative;
+  overflow: visible;   /* Ensures the circle isn't cut off */
+}
+
+/* 2. The Horizontal Rectangle (The Base) */
+.hanger-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;        /* Thickness of the horizontal bar */
+  border: 4px solid black;
+  box-sizing: border-box;
+}
+
+/* 3. The Circle (The Hanger Loop) */
+.hanger-top::after {
+  content: "";
+  position: absolute;
+  
+  /* Center the circle horizontally */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  /* Position it so it sits on the top edge */
+  top: -57px;          /* Adjust this to move the circle up or down */
+  
+  width: 60px;         /* Diameter of the circle */
+  height: 60px;
+  border: 4px solid black;
+  border-radius: 50%;
+  box-sizing: border-box;
+  z-index: 1;          /* Keeps the circle on top of the bar */
+}
+/* The Footer Version (Rotated) */
+.hanger-footer {
+  transform: rotate(180deg);
+  margin-top: 20px; /* Extra space so the circle doesn't overlap content */
+  margin-bottom: 90px;
+}
