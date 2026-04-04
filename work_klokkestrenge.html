@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="author" content="Helena Lindegaard Starup" />
+    <title>Klokkestrenge</title>
+    <meta property="og:title" content="Helena Lindegaard Starup" />
+    <meta name="description" content="Personal website of Helena Lindegaard Starup." />
+    <meta name="og:description" content="Personal website of Helena Lindegaard Starup." />
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <h1> <a href="index.html">Helena Lindegaard Starup</a></h1>
+
+        <ul class="menu">
+            <li>
+                <a href="works.html">works</a>
+            </li>
+            <li>
+                <a href="about.html">about</a>
+            </li>
+        </ul>
+
+        <hr class="hanger-top" />
+    </header>
+
+    <main>
+
+        <div class="værkside">
+            <p>Klokkestrenge, 2024</p>
+
+            <div class="slideshow-container">
+
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 7</div>
+                    <img src="works/24_work_klokkestrenge/Klokkestrenge_1.jpg" style="width:100%">
+                    <div class="text">(detalje)</div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 7</div>
+                    <img src="works/24_work_klokkestrenge/Klokkestrenge_2.jpg" style="width:100%">
+                    <div class="text">(detalje)</div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 7</div>
+                    <img src="works/24_work_klokkestrenge/Klokkestrenge_3.jpg" style="width:100%">
+                    <div class="text">(detalje)</div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 7</div>
+                    <img src="works/24_work_klokkestrenge/Klokkestrenge_4.jpg" style="width:100%">
+                    <div class="text">(detalje)</div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 7</div>
+                    <img src="works/24_work_klokkestrenge/Klokkestrenge_5.jpg" style="width:100%">
+                    <div class="text">Klokkestrenge</div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 7</div>
+                    <img src="works/24_work_klokkestrenge/Klokkestrenge_6.jpg" style="width:100%">
+                    <div class="text">(detalje)</div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">7 / 7</div>
+                    <img src="works/24_work_klokkestrenge/Klokkestrenge_7.jpg" style="width:100%">
+                    <div class="text">(detalje)</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            <br>
+            <!--prik markør -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+            </div>
+
+
+
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+            </script>
+            <br>
+            <br>
+            <br>
+
+            <!--Udstillingsbeskrivelse-->
+            <b><i>Klokkestrenge</i>, 2024</b> <br>
+            <br>
+            HDPE-plast (skruelåg fra natur og skraldespande), broderigarn, broderi beslag, pap, flamingo<br><br>
+            Udstillet til
+            <a target="_blank"
+                href="https://www.facebook.com/photo?fbid=882420680564371&set=a.435496325256811&locale=da_DK">
+                Observatør på åben mark
+            </a>
+            , BGK's årsudstilling i Esbjeg, 2024<br>
+            Mål: Variende <br>
+            <br>
+            <br>
+            <br>
+
+
+        </div>
+
+    </main>
+
+    <footer>
+        <hr class="hanger-top hanger-footer" />
+        <p><a href="mailto:helena@lindegaard-starup.dk" class="fa fa-envelope"> helena@lindegaard-starup.dk</a></p>
+        <a href="https://www.instagram.com/helena.starup/" class="fa fa-instagram"> helena_starup</a>
+    </footer>
+
+</body>
+
+</html>
