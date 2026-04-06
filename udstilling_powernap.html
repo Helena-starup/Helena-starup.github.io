@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="author" content="Helena Lindegaard Starup" />
+    <title>Powernap</title>
+    <meta property="og:title" content="Helena Lindegaard Starup" />
+    <meta name="description" content="Personal website of Helena Lindegaard Starup." />
+    <meta name="og:description" content="Personal website of Helena Lindegaard Starup." />
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <h1> <a href="index.html">Helena Lindegaard Starup</a></h1>
+
+        <ul class="menu">
+            <li>
+                <a href="works.html">works</a>
+            </li>
+            <li>
+                <a href="about.html">about</a>
+            </li>
+        </ul>
+
+        <hr class="hanger-top" />
+    </header>
+
+    <main>
+
+        <div class="værkside">
+            <p>Deltagelse i udstilling: <i>Powernap</i>, 2026</p>
+
+            <div class="slideshow-container">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 5</div>
+                    <img src="works/25_exhi_powernap/Powernap_1.jpg" style="width:100%">
+                    <div class="text">pudekamp </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 5</div>
+                    <img src="works/25_exhi_powernap/Powernap_2.jpg" style="width:100%">
+                    <div class="text">pudekamp</div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 5</div>
+                    <img src="works/25_exhi_powernap/Powernap_3.jpg" style="width:100%">
+                    <div class="text">pudekamp - (detalje)</div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 5</div>
+                    <img src="works/25_exhi_powernap/Powernap_4.jpg" style="width:100%">
+                    <div class="text">jorden er giftig - (detalje)</div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 5</div>
+                    <img src="works/25_exhi_powernap/Powernap_5.jpg" style="width:100%">
+                    <div class="text">pudekamp - (detalje)</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            <br>
+            <!--prik markør -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+
+
+
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+            </script>
+            <br>
+            <br>
+            <br>
+            <!--Værkbeskrivelse-->
+            <b><i>pudekamp</i></b> <br>
+            <br>
+            Pude, pudebetræk, broderigarn<br><br>
+            Mål: 63 x 63 cm<br>
+            <br>
+            <br>
+            <br>
+            <b><i>jorden er giftig</i></b> <br>
+            <br>
+            Dyner, sytråd<br><br>
+            Mål: 6m x 8m<br>
+            <br> <br> <br> <br> <br> <br>
+            <!--Udstillingsbeskrivelse-->
+            <a href="https://www.idoart.dk/kalender/moenstring/" target="_blank">
+                <b> Pressemeddelelse, oktober 2025 </b> <br>
+            </a>
+            <br>
+            Vi er så heldige igen i år at kunne byde velkommen til en gruppe kunststuderende fra både Det Jyske
+            Kunstakademi, Det Fynske Kunstakademi og Det Kongelige Danske Kunstakademi, der sammen kalder til mønstring
+            på Kulturkasernen. <br>
+            <br>
+            De gamle mandskabsstuer genoplives, kunsten flytter ind og der bliver skabt nye fortolkninger af
+            soldaterlivet, fællesskaberne og det særlige sammenhold, der kan opstå mellem mennesker. For en kort
+            bemærkning eller for livet. Udstillingen tematiserer kontrasterne og sammenhængen mellem den hårde
+            disciplinære militære verden og de bløde menneskelige perspektiver, der sameksisterer på en kaserne – både
+            historisk set og helt aktuelt. Oprustning til krig, åndelig oprustning, sårbarhed, minder, sammenhold og
+            værnepligt er alle begreber, der bliver undersøgt.<br>
+            <br>
+            Og hvordan ser de ud, hvis man vender dem lidt på hovedet?<br>
+            <br>
+            Publikum inviteres til at inspicere og bevæge sig frit gennem tre stedspecifikke totalinstallationer, der
+            hver især tilbyder en sanselig oplevelse og refleksion. Tag en powernap i en feltseng, lyt til
+            lydperformance og tillad dig selv at mindes fællesskaber, der har haft stor betydning i netop dit liv:<br>
+            <ul>
+                <li>
+                    <p>><b>Soft Entry</b> er skabt af María Kristín Antonsdóttir, Caroline Sofie Have og Marie Hartmann
+                        Christensen fra Det
+                        Det Fynske Kunstakademi. </p>
+                </li>
+                <li>
+                    <p> <b>Powernap</b> er skabt af Ida Kamille Kjær Braae, Søren Katborg-Vestergaard, Ulf Stubbe
+                        Teglbjærg,
+                        Jonas Skou
+                        Jonassen, Helena Lindegaard Starup, Emelin Tvilling og Alma-SofieTronborg Jensen fra Det Jyske
+                        Kunstakademi </p>
+                </li>
+                <li>
+                    <p> <b>Som aflejringer</b> er skabt af Malene Rabjerg, Signe Holm Timmermand og Tira Preis fra Det
+                        Kongelige Danske
+                        Kunstakademi</p>
+                </li>
+            </ul>
+
+            Med MØNSTRING lanceres KUNSTRUM 7000, en ny udstillingsplatform, der understøtter eksperimenterende og
+            stedspecifik samtidskunst i samarbejde med landets kunstakademier.<br>
+            <br>
+            Vel mødt i Kulturkasernen.<br>
+            <br>
+            Fernisering: Fredag d. 7. november, kl. 15-19.<br>
+            Åbent: Lørdag & søndag d. 8. og 9. november, kl. 10-16.<br>
+            Mere info:
+            <a href="https://kulturkasernen.fredericia.dk/" target="_blank">
+                Kulturkasernen.fredericia.dk <br>
+            </a><br>
+            Posted in Fredericia, Jylland, Udstillinger, 2025<br>
+        </div>
+
+    </main>
+
+    <footer>
+        <hr class="hanger-top hanger-footer" />
+        <p><a href="mailto:helena@lindegaard-starup.dk" class="fa fa-envelope"> helena@lindegaard-starup.dk</a></p>
+        <a href="https://www.instagram.com/helena.starup/" class="fa fa-instagram"> helena_starup</a>
+    </footer>
+
+</body>
+
+</html>

@@ -26,7 +26,16 @@
       </li>
     </ul>
 
-    <hr class="hanger-top"/>
+    <hr class="hanger-top" />
+    <style>
+      img {
+        float: right;
+        margin-bottom: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+    </style>
+
   </header>
 
   <main>
@@ -34,12 +43,13 @@
     <p> Helena er studerende på Det Jyske kunstakademi og bosat i Aarhus.</p>
     <br>
 
-    <!-- Liste over udstillinger -->
+    <img id="profilBillede" src="works/helena løber 1.png" height="300" onclick="skiftBillede()">
+
     <p> <b> Soloudstillinger:</b> </p>
     2026
     <ul>
       <li>
-        <a href="http://godsbanen.dk/kalender/jegser/" target="_blank">
+        <a href="udstillinger/udstilling_jeg ser lidt af mig i dig.html" target="_blank">
           Jeg ser lidt af mig i dig, Mellemrummet - Godsbanen Aarhus
         </a>
       </li>
@@ -128,10 +138,21 @@
   </main>
 
   <footer>
-    <hr class="hanger-top hanger-footer"/>
+    <hr class="hanger-top hanger-footer" />
     <p><a href="mailto:helena@lindegaard-starup.dk" class="fa fa-envelope"> helena@lindegaard-starup.dk</a></p>
     <a href="https://www.instagram.com/helena.starup/" class="fa fa-instagram"> helena_starup</a>
   </footer>
+
+  <script>
+    function skiftBillede() {
+      var img = document.getElementById('profilBillede');
+      if (img.src.includes("helena%20l%C3%B8ber%201.png")) {
+        img.src = "works/helena løber 2.png";
+      } else {
+        img.src = "works/helena løber 1.png";
+      }
+    }
+  </script>
 
 </body>
 
